@@ -206,7 +206,7 @@
     <p>Searchable reference for SL Mentors &#8212; FAQs, landmarks, scripts, and tips for helping new residents.</p>
     <div class="stat-row">
       <div class="stat-chip" onclick="jumpTo('sec-mobile')" title="Go to Mobile" style="cursor:pointer;"><span class="sc-val">2</span><span class="sc-lbl">Mobile</span></div>
-      <div class="stat-chip" onclick="jumpTo('sec-faqs')" title="Go to FAQs" style="cursor:pointer;"><span class="sc-val">27</span><span class="sc-lbl">FAQs</span></div>
+      <div class="stat-chip" onclick="jumpTo('sec-faqs')" title="Go to FAQs" style="cursor:pointer;"><span class="sc-val">28</span><span class="sc-lbl">FAQs</span></div>
       <div class="stat-chip" onclick="jumpTo('sec-landmarks')" title="Go to Landmarks" style="cursor:pointer;"><span class="sc-val">10</span><span class="sc-lbl">Landmarks</span></div>
     </div>
 
@@ -656,6 +656,46 @@
             <div class="say-text" onclick="copyPara(this)">Go to Avatar &#8594; Avatar Welcome Pack in the top menu bar and choose a complete modern avatar. It's free and takes just a few seconds!</div>
           </div>
           <div class="xref">&#128206; See also: <a class="xref-link" href="#" onclick="jumpTo('faq-free-avatar');return false;">Free Avatar FAQ</a></div>
+        </div>
+      </div>
+
+
+      <div class="faq-item edge-app" id="faq-ao" data-search="AO animation overrider stand walk duck walk stiff stand animated stand not moving no animation system default starter avatar initial outfit AWP avatar welcome pack animation controller add replace outfit wear worn attachment firestorm built-in free ao hud semotion vista customised pose">
+        <div class="faq-q" onclick="tog(this)">
+          <span class="faq-q-text">A newcomer is standing stiffly / asks how to get an animated stand like mine.</span>
+          <span class="faq-tag t-app">Appearance</span>
+          <span class="faq-tog">+</span>
+        </div>
+        <div class="faq-body">
+          <p>Their avatar is playing the <strong>default system stand</strong>. The animated stand you have comes from an <strong>AO</strong> (Animation Overrider) - a separate worn attachment, not part of the body, shape or clothing. Every modern starter already ships with one, so it is usually just a case of wearing it.</p>
+          <div class="say-block">
+            <div class="say-label">// Find and wear their AO - without wiping their outfit</div>
+            <div class="steps" style="margin:0;background:none;border:none;padding:0;">
+              <div class="step"><div class="sn" onclick="copyStep(this)" style="cursor:pointer;" title="Copy this step">1</div><div>Open <strong>Inventory</strong> and type <strong>animation</strong> in the search box.</div></div>
+              <div class="step"><div class="sn" onclick="copyStep(this)" style="cursor:pointer;" title="Copy this step">2</div><div>Look for <strong>Animation Overrider - Female/Male</strong> (signup starter avatar) or <strong>AWP female/male animation controller v2</strong> (Avatar Welcome Pack).</div></div>
+              <div class="step"><div class="sn" onclick="copyStep(this)" style="cursor:pointer;" title="Copy this step">3</div><div>Right-click it and choose <strong>Add</strong> - <em>not</em> Replace Outfit. Add layers the AO on top and keeps everything they have customised.</div></div>
+              <div class="step"><div class="sn" onclick="copyStep(this)" style="cursor:pointer;" title="Copy this step">4</div><div>Still stiff? Only <strong>one</strong> AO should be worn at a time - two active AOs fight over the stand. Remove the spare.</div></div>
+            </div>
+            <div class="say-text" style="display:none;">Their avatar is on the default system stand. The animated stand comes from an AO (Animation Overrider), a separate worn attachment. To fix it:
+1. Open Inventory and type "animation" in the search box.
+2. Look for "Animation Overrider - Female/Male" (signup starter) or "AWP female/male animation controller v2" (Avatar Welcome Pack).
+3. Right-click it and choose Add - not Replace Outfit. Add keeps your current look.
+4. Still stiff? Only one AO should be worn at a time. Remove any spare.</div>
+            <button class="copy-btn" onclick="copyText(this)">Copy all</button>
+          </div>
+          <div class="tip-box">
+            <div class="tip-label">// Read the room first</div>
+            <p>If they have clearly customised their avatar, <strong>add the AO on its own</strong> - never Replace Outfit, which would strip their work back to a plain starter. If they still look like an untouched starter, re-wearing the full Initial Outfit or Avatar Welcome Pack outfit is fine and brings the AO back in one go.</p>
+          </div>
+          <div class="say-block">
+            <div class="say-label">// Tip to share with resident</div>
+            <div class="say-text" onclick="copyPara(this)">That stiff stand is just the default one - the smoother stand comes from an AO. Open your Inventory, type "animation" in the search box, then right-click the item it finds and choose Add (not Replace Outfit, so you keep your current look). That's it!</div>
+          </div>
+          <div class="tip-box">
+            <div class="tip-label">// If they genuinely have no AO</div>
+            <p>On <strong>Firestorm</strong> there is a built-in AO (no HUD needed) you can load animations into. On the official viewer, or for a quick fix, a <strong>free AO HUD</strong> from the Marketplace or an in-world freebie hub works - wear the HUD and the duck walk is gone.</p>
+          </div>
+          <div class="xref">&#128206; See also: <a class="xref-link" href="#" onclick="jumpTo('faq-free-avatar');return false;">Free Avatar FAQ</a> &middot; <a class="xref-link" href="#" onclick="jumpTo('faq-missing-parts');return false;">Missing body parts FAQ</a></div>
         </div>
       </div>
 
