@@ -407,6 +407,7 @@ function updateThemeToggle() {
         <span class="nav-item nav-item--fs" onclick="jumpTo(&#39;qa-head-mouse&#39;)"><span class="ni-dot"></span>Stop head following mouse</span>
         <span class="nav-item nav-item--fs" onclick="jumpTo(&#39;qa-selection-beam&#39;)"><span class="ni-dot"></span>Turn off selection beam</span>
         <span class="nav-item nav-item--fs" onclick="jumpTo(&#39;qa-script-particles&#39;)"><span class="ni-dot"></span>Turn off script particles</span>
+        <span class="nav-item nav-item--fs" onclick="jumpTo(&#39;qa-chiclet-location&#39;)"><span class="ni-dot"></span>Move popups / chiclets</span>
         <span class="nav-item nav-item--fs" onclick="jumpTo(&#39;qa-clean-install&#39;)"><span class="ni-dot"></span>Clean install (Firestorm)</span>
         <span class="nav-item nav-item--fs" onclick="jumpTo(&#39;qa-reset-settings&#39;)"><span class="ni-dot"></span>Reset all settings</span>
         <span class="nav-item nav-item--fs" onclick="jumpTo(&#39;qa-shortcuts&#39;)"><span class="ni-dot"></span>Keyboard shortcuts</span>
@@ -452,9 +453,9 @@ function updateThemeToggle() {
     <div class="header-title">Technical <span>Q&amp;A</span></div>
     <p class="header-sub">Answers to more technical questions from residents - streaming, scripting, media, and more.</p>
     <div class="stat-row">
-      <div class="stat-chip" onclick="document.getElementById(&#39;qa-video-stream&#39;).scrollIntoView({behavior:&#39;smooth&#39;})" title="Go to Q&amp;As" style="cursor:pointer;"><span class="sc-val">15</span><span class="sc-lbl">Q&amp;As</span></div>
+      <div class="stat-chip" onclick="document.getElementById(&#39;qa-video-stream&#39;).scrollIntoView({behavior:&#39;smooth&#39;})" title="Go to Q&amp;As" style="cursor:pointer;"><span class="sc-val">16</span><span class="sc-lbl">Q&amp;As</span></div>
       <div class="stat-chip" onclick="document.getElementById(&#39;sec-flowcharts&#39;).scrollIntoView({behavior:&#39;smooth&#39;})" title="Go to Flowcharts" style="cursor:pointer;"><span class="sc-val">4</span><span class="sc-lbl">Flowcharts</span></div>
-      <div class="stat-chip" onclick="document.getElementById(&#39;qa-head-mouse&#39;).scrollIntoView({behavior:&#39;smooth&#39;})" title="Go to Firestorm Settings" style="cursor:pointer;border-color:rgba(255,100,50,0.4);"><span class="sc-val" style="color:var(--c-fs);">6</span><span class="sc-lbl">Firestorm</span></div>
+      <div class="stat-chip" onclick="document.getElementById(&#39;qa-head-mouse&#39;).scrollIntoView({behavior:&#39;smooth&#39;})" title="Go to Firestorm Settings" style="cursor:pointer;border-color:rgba(255,100,50,0.4);"><span class="sc-val" style="color:var(--c-fs);">7</span><span class="sc-lbl">Firestorm</span></div>
     </div>
 
     <div class="hero-search-wrap" id="tech-search-wrap" style="--hero-accent: var(--c-tech);">
@@ -878,7 +879,25 @@ function updateThemeToggle() {
     </div>
   </div>
 
-
+  <div class="qa-card fs-card" id="qa-chiclet-location" data-search="popup popups chiclet chiclets notification notifications location move position top right bottom right group notices overlay firestorm 2d ui">
+    <div class="qa-q" onclick="tog(this)">
+      <span class="qa-q-text">How do I move the group notice / IM popups (chiclets) from the top-right to the bottom-right?</span>
+      <span class="qa-tag" style="color:var(--c-fs);background:rgba(255,100,50,0.1);border-color:rgba(255,100,50,0.3);">Display</span>
+      <span class="qa-tog">+</span>
+    </div>
+    <div class="qa-body">
+      <p>Firestorm only &#8212; not available in the official SL viewer.</p>
+      <p style="margin-top:8px;">Go to <strong>Preferences &#8594; User Interface &#8594; 2D Overlay &#8594; Group Notices and chiclets location</strong> and switch it from the default top-right to bottom-right.</p>
+      <div class="tip-box" style="margin-top:10px;">
+        <div class="tip-label">// Note</div>
+        <p>A Firestorm restart is required for the change to take effect.</p>
+      </div>
+      <div class="say-block" style="margin-top:10px;">
+        <div class="say-label">// Click to copy</div>
+        <div class="say-text" onclick="copyPara(this)">Go to Preferences &#8594; User Interface &#8594; 2D Overlay &#8594; Group Notices and chiclets location, and switch it to bottom-right. You'll need to restart Firestorm for the change to take effect.</div>
+      </div>
+    </div>
+  </div>
 
   <div class="qa-card fs-card" id="qa-clean-install" data-search="clean install firestorm reinstall uninstall settings cache wipe fresh start problems viewer broken crash crashes crashing freeze frozen hang hangs lag lagging slow performance">
     <div class="qa-q" onclick="tog(this)">
