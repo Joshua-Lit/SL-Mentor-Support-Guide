@@ -400,6 +400,7 @@ function updateThemeToggle() {
         <span class="nav-item" onclick="jumpTo(&#39;qa-spam-protection&#39;)"><span class="ni-dot"></span>Spam / griefing protection</span>
         <span class="nav-item" onclick="jumpTo(&#39;qa-pay-confirm&#39;)"><span class="ni-dot"></span>Confirm before paying</span>
         <span class="nav-item" onclick="jumpTo(&#39;qa-reflection-probes&#39;)"><span class="ni-dot"></span>PBR reflection probes</span>
+        <span class="nav-item" onclick="jumpTo(&#39;qa-rez-water&#39;)"><span class="ni-dot"></span>Can't rez on water</span>
         <span class="nav-item" onclick="jumpTo(&#39;qa-appliers&#39;)"><span class="ni-dot"></span>Makeup / appliers won't show</span>
         <span class="nav-item" onclick="jumpTo(&#39;qa-mesh-blender-version&#39;)"><span class="ni-dot"></span>Blender .dae export missing</span>
         <span class="nav-item" onclick="jumpTo(&#39;qa-mesh-upload-textured&#39;)"><span class="ni-dot"></span>Upload textured mesh (steps)</span>
@@ -679,6 +680,31 @@ function updateThemeToggle() {
       <div class="tip-box">
         <div class="tip-label">// Mentor note</div>
         <p>Both videos were pinned in the Bellisseria Mentors channel by Mini Mole as the recommended walkthroughs for residents asking about PBR reflection probe setup. If a resident is unfamiliar with PBR generally, point them at the videos rather than trying to talk them through it in chat &mdash; it's genuinely easier to follow visually.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="qa-card" id="qa-rez-water" data-search="rez rezz object water boat boats vehicle dock docks pier onto water drop drag from inventory nothing happens no entry cursor cannot can't rez transparent water opaque graphics setting reinstall clean install reset defaults firestorm official viewer preferences advanced settings shaders seabed under surface see through calculation placement">
+    <div class="qa-q" onclick="tog(this)">
+      <span class="qa-q-text">Objects drag onto land and docks fine, but dropping them onto open water does nothing - why?</span>
+      <span class="qa-tag">Graphics</span>
+      <span class="qa-tog">+</span>
+    </div>
+    <div class="qa-body">
+      <p>This is almost always a <strong>graphics setting</strong>, not a land or permissions problem. If boats (or any objects) drag out of inventory onto land or a dock but dropping onto open water just gives the "no entry" cursor, the usual cause is <strong>Transparent Water being switched off</strong>. A fresh install resets graphics to defaults, and that reset can flip water rendering to opaque.</p>
+      <p style="margin-top:10px;">Why it happens: to rez an object on water, the viewer has to work out where you are placing it, and it does that by looking <em>through</em> the surface to the land or seabed beneath. If water is rendering opaque, that under-the-surface calculation fails, so the drop is rejected. Land and existing objects are opaque anyway and don't rely on seeing through anything, so they still accept drops.</p>
+      <p style="margin-top:10px;">The fix is to turn transparent water back on:</p>
+      <div class="bullets" style="margin-top:6px;">
+        <div class="bullet"><strong>Firestorm:</strong> Preferences &#8594; Graphics &#8594; General &#8594; tick <strong>Transparent Water</strong>.</div>
+        <div class="bullet"><strong>Official SL viewer:</strong> Preferences &#8594; Graphics &#8594; Advanced Settings &#8594; Shaders &#8594; tick <strong>Transparent Water</strong> (top of the Shaders column).</div>
+      </div>
+      <div class="say-block" style="margin-top:10px;">
+        <div class="say-label">// Click to copy</div>
+        <div class="say-text" onclick="copyPara(this)">If you can drop objects onto land but not onto open water, it is almost certainly Transparent Water being turned off - a reinstall resets it. In Firestorm go to Preferences &#8594; Graphics &#8594; General and tick "Transparent Water". On the official viewer, open Preferences &#8594; Graphics &#8594; Advanced Settings &#8594; Shaders and tick "Transparent Water". Then try dragging your boat onto the water again.</div>
+      </div>
+      <div class="tip-box">
+        <div class="tip-label">// Mentor note</div>
+        <p>This one tends to surface right after a clean install or a settings reset, since both restore graphics defaults. If a resident mentions either just before the problem started, Transparent Water is the first thing to check.</p>
       </div>
     </div>
   </div>
